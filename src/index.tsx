@@ -7,9 +7,9 @@ import MosesImageCarousel from './components/MosesImageCarousel';
 import SlideImage from './Models/SlideImage.model';
 
 const images: SlideImage[] = []
-images.push(new SlideImage({url: "https://info.japanesehelp.com/wp-content/uploads/2020/07/three-geisha-walking-between-buildings-1325837-1-1024x683.jpg", visible: false}))
-images.push(new SlideImage({url: "https://info.japanesehelp.com/wp-content/uploads/2020/07/japanese-lucky-coin-cat-932261-1-1024x681.jpg", visible: false}))
-images.push(new SlideImage({url: "https://info.japanesehelp.com/wp-content/uploads/2020/07/low-angle-photo-of-lighted-signage-2067048-1-1024x683.jpg", visible: false}))
+images.push(new SlideImage({url: "https://info.japanesehelp.com/wp-content/uploads/2020/07/three-geisha-walking-between-buildings-1325837-1-1024x683.jpg", visible: false, text: "Geisha"}))
+images.push(new SlideImage({url: "https://info.japanesehelp.com/wp-content/uploads/2020/07/japanese-lucky-coin-cat-932261-1-1024x681.jpg", visible: false, text: "Money cat!"}))
+images.push(new SlideImage({url: "https://info.japanesehelp.com/wp-content/uploads/2020/07/low-angle-photo-of-lighted-signage-2067048-1-1024x683.jpg", visible: false, text: "Shibuya"}))
 
 ReactDOM.render(
   <React.StrictMode>

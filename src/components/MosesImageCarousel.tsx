@@ -75,9 +75,9 @@ export default class ImageCarousel extends React.Component<Props, object> {
                 {
                   ImageSlide.visible ?
                     <div key={index} className="mySlides fade">
-                      <div className="numbertext">{index} / 3</div>
+                      <div className="numbertext">{(index + 1)} / 3</div>
                       <img src={ImageSlide.url} alt="" />
-                      <div className="text">Caption Text</div>
+                      <div className="text">{ImageSlide.text}</div>
                     </div>
                     : ""
                 }
