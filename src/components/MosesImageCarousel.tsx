@@ -23,7 +23,7 @@ export default class ImageCarousel extends React.Component<Props, object> {
       slideIndex: 1,
       imgs: this.props.images
     }
-    console.log("test!" + this.props.title)
+
     this.dots = this.props.images.map((SlideImage: SlideImage) => {
       return new SlideDot(
         {
@@ -31,12 +31,15 @@ export default class ImageCarousel extends React.Component<Props, object> {
         });
     })
 
-    this.showSlides(
-      this.slideIndex);
+    // Display slides initially
+    this.showSlides(this.slideIndex);
+
+    // Also start a loop going every 15 seconds to change picture
+    setInterval(() => this.plusSlides(1), 15000);
   }
 
   // Next/previous controls
-  plusSlides(n: any) {
+  plusSlides(n: number) {
     this.showSlides(this.slideIndex += n);
   }
 
