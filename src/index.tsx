@@ -3,12 +3,12 @@ import ReactDOM from 'react-dom';
 import './index.css';
 import App from './App';
 import * as serviceWorker from './serviceWorker';
-import QasaImageCarousel from './components/QasaImageCarousel';
+import MosesImageCarousel from './components/MosesImageCarousel';
 
 ReactDOM.render(
   <React.StrictMode>
     <App />
-    <QasaImageCarousel title="Image Carousel for Qasa" numImages={1} />
+    <MosesImageCarousel title="Image Carousel for Qasa" numImages={1} />
   </React.StrictMode>,
   document.getElementById('root')
 );
