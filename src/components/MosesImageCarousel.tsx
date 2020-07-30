@@ -61,6 +61,17 @@ export default class ImageCarousel extends React.Component<Props, object> {
     }
 
     this.props.images[this.slideIndex - 1].visible = true;
+
+    // Reset dots
+    this.dots.map(d => {
+      d.active = false
+      return d
+    })
+
+    // Make active for the one we have active using same index as image list 
+    // since they should have same amount of elements
+    this.dots[this.slideIndex - 1].active = true;
+
     this.setState({ imgs: this.props.images })
   }
   render() {
@@ -91,7 +102,7 @@ export default class ImageCarousel extends React.Component<Props, object> {
         <div style={{ textAlign: "center" }}>
           {
             this.dots.map((SlideDots: SlideDot, index) => (
-              <span key={index} className="dot" onClick={() => { this.currentSlide(index) }}></span>
+              <span key={index} className={"dot " + (SlideDots.active ? 'active' : '')} onClick={() => { this.currentSlide(index + 1) }}></span>
             ))}
         </div>
       </div>
