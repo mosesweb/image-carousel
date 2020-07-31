@@ -27,7 +27,7 @@ export default class ImagesList extends React.Component<{
                 <div className="column">
                     {
                         this.props.images.map((i, index) =>
-                            <img key={index} className={i.active ? "active" : "inactive"} onClick={() => this.changeStatus(i)} alt="" src={i.url} />
+                            <img key={index} className={i.active ? "active" : "inactive"} onClick={(e) => { e.preventDefault(); this.changeStatus(i) }} alt="" src={i.url} />
                         )
                     }</div>
             </div>
