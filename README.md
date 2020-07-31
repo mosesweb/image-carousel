@@ -1,11 +1,10 @@
-# Foobar
+# image-carousel
 
 Simple carousel image slider with React using Typescript.
 
 ## Get dependencies and Launch app
 
-
-```bash
+```
 npm install
 
 yarn start
