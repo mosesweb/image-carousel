@@ -1,0 +1,40 @@
+.row {
+    display: flex;
+    flex-wrap: wrap;
+    padding: 0 4px;
+  }
+  
+  .column {
+    flex: 50% 1;
+    padding: 0 4px;
+  }
+  
+  .column img {
+    margin-top: 8px;
+    vertical-align: middle;
+    width: 500px
+  }
+
+  .column img.inactive {
+    opacity: 0.4;
+  }
+  .column img.inactive:hover {
+    opacity: 0.8;
+    transition: opacity .25s ease-in-out;
+    -moz-transition: opacity .25s ease-in-out;
+    -webkit-transition: opacity .25s ease-in-out;
+    cursor: pointer
+  }
+  .column img.active {
+    opacity: 1;
+  }
+
+  .header
+  {
+    text-align: center;
+  }
+
+.imagesContainer{
+    margin-bottom: 10px;
+    margin-top: 10px;
+}

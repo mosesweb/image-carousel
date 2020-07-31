@@ -5,6 +5,7 @@ export default class SlideImage {
     visible: boolean = false
     key: Guid
     text: string = "";
+    active: boolean = false;
     constructor(init?: Partial<SlideImage>) {
         // This will set values for each properties that can be found
         this.key = Guid.newGuid();

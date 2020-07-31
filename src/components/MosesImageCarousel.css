@@ -19,6 +19,10 @@
 }
 
 /* Next & previous buttons */
+span.prev {
+  left: 2%;
+}
+
 .prev, .next {
   cursor: pointer;
   position: absolute;
