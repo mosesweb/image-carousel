@@ -16,6 +16,7 @@ export interface Props {
 
 export default class ImageCarousel extends React.Component<{
   images: SlideImage[],
+  title: string
   ImageHandleChange: any
 },
   ImageListProps> {
@@ -40,7 +41,7 @@ export default class ImageCarousel extends React.Component<{
     setInterval(() => {
       if (this.DisplayingImages.length > 0)
         this.plusSlides(1)
-    }, 3000);
+    }, 15000);
   }
   componentWillReceiveProps(nextProps: ImageListProps) {
     this.setState({ images: nextProps.images })
@@ -106,6 +107,7 @@ export default class ImageCarousel extends React.Component<{
   render() {
     return (
       <div className="slideshow-element">
+        <h1>{this.props.title}</h1>
         <div className="slideshow-container">
           {
             this.DisplayingImages.map((ImageSlide: SlideImage, index) => (
@@ -116,7 +118,7 @@ export default class ImageCarousel extends React.Component<{
                     <div key={index} className="mySlides fade">
                       <div className="numbertext">{(index + 1)} / {this.DisplayingImages.length}</div>
                       <img src={ImageSlide.url} alt="" />
-                      <div className="text">{ImageSlide.text} + {ImageSlide.active ? "active" : "no"}</div>
+                      <div className="text">{ImageSlide.text}</div>
                     </div>
                     : null
                 }

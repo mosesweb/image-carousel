@@ -34,6 +34,7 @@ export default class App extends React.Component<Props> {
     this.images.push(new SlideImage({ url: "https://info.japanesehelp.com/wp-content/uploads/2020/07/guillermo-ferla-Oze6U2m1oYU-unsplash-1024x680.jpg", visible: false, text: "Space", active: false }))
     this.images.push(new SlideImage({ url: "https://info.japanesehelp.com/wp-content/uploads/2020/07/andre-benz-JnB8Gio4GZo-unsplash-1024x683.jpg", visible: false, text: "Subway in New Work", active: false }))
   }
+
   componentDidMount() {
     this.setState({
       images: this.images,
@@ -41,16 +42,14 @@ export default class App extends React.Component<Props> {
     })
   }
 
-
   render() {
     return (
       <div className="App">
-        <MosesImageCarousel images={this.state.images}
+        <MosesImageCarousel images={this.state.images} title={"Image carousel for Qasa!"}
           ImageHandleChange={this.ImageHandleChange.bind(this)}
         />
         <ImagesList images={this.state.images}
           ImageHandleChange={this.ImageHandleChange.bind(this)}
-         
         />
       </div>
     );
